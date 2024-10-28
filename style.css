@@ -1,0 +1,319 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cart img {
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+.cart img:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  opacity: 0.8; /* Reduce opacity for a fade effect */
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Hover Effect for Navigation Links */
+.nav-links a:hover {
+  color: orange; /* Change text color to orange on hover */
+}
+
+.shop-now {
+  background-color: #333; /* Initial background color */
+  color: white; /* Initial text color */
+  padding: 10px 20px; /* Padding around the text */
+  text-decoration: none; /* No underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effect for Shop Now Button */
+.shop-now:hover {
+  background-color: orange; /* Change background color on hover */
+  color: black; /* Change text color on hover */
+}
+
+/* Mobile Nav */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    gap: 1em;
+    padding: 1em 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger on mobile */
+  }
+}
+
+/* Add transition for opening/closing */
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Hero Section */
+.hero {
+  background: url("blur.jpg") no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4em;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin-top: 0.5em;
+}
+
+.shop-now {
+  background-color: #ff6200;
+  padding: 0.5em 1.5em;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1em;
+  display: inline-block;
+}
+
+/* Product Section */
+.products {
+  padding: 2em;
+  text-align: center;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background-color: white;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex-basis: 18%;
+}
+
+.product-card img {
+  width: 150px;
+  height: auto;
+}
+
+.product-card h3 {
+  margin: 1em 0 0.5em;
+}
+
+.product-card p {
+  color: #ff6200;
+  font-weight: bold;
+}
+
+/* Shoe Image Styles */
+.product-card img {
+  width: 100%; /* Ensure the image fills the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effect for Shoe Images */
+.product-card:hover img {
+  transform: scale(1.1); /* Slightly enlarge image on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+.product-card img {
+  width: 100%; /* Ensure the image fills the card */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  object-fit: cover; /* Cover the square area without distortion */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Coming Soon Section */
+.coming-soon {
+  display: flex;
+  justify-content: space-around;
+  padding: 2em;
+  background-color: #f1f1f1;
+  flex-wrap: wrap;
+}
+
+.card {
+  text-align: center;
+  background-color: white;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  margin-bottom: 1em;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card-text {
+  margin-top: 1em;
+}
+
+.card-text h3 {
+  font-size: 1.2em;
+}
+
+/* Responsive Design */
+
+/* Tablet Devices */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 3em;
+  }
+
+  .hero p {
+    font-size: 1.2em;
+  }
+
+  .product-grid {
+    justify-content: space-around;
+  }
+
+  .product-card {
+    flex-basis: 30%;
+  }
+
+  .coming-soon {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .shop-now {
+    padding: 0.5em 1em;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+
+  .coming-soon {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .card {
+    width: 100%;
+  }
+}

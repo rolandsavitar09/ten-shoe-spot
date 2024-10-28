@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalogue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="Logo 10 Shoe Spot.png" alt="Logo 10 Shoe Spot" style="width: 50px; height: auto;">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#">Man</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Casual</a></li>
+            <li><a href="#">Sport</a></li>
+            <li><a href="#">Sneakers</a></li>
+        </ul>
+    </nav>
+
+    <section class="breadcrumb">
+        <a href="PEM WEB FIX.html"><img src="arrow.png" alt=""><span style="margin-left: 20px;">Back</span></a>
+    </section>
+
+    <main>
+        <section class="filters">
+            <button id="reset-filters">Reset Filters</button>
+
+            <div class="filter-group">
+                <button class="filter-button" id="price-btn">Price &#9660;</button>
+                <div class="dropdown-content" id="price-dropdown">
+                    <label for="price-range">Price: Rp <span id="price-value">0</span> - Rp 3.000.000</label>
+                    <input type="range" id="price-range" min="0" max="3000000" step="1000" value="0" />
+                </div>
+            </div>
+            <div class="filter-group">
+                <button class="filter-button" id="size-btn">Size &#9660;</button>
+                <div class="dropdown-content" id="size-dropdown">
+                    <ul class="size-list">
+                        <li>37</li>
+                        <li>38</li>
+                        <li>39</li>
+                        <li>40</li>
+                        <li>41</li>
+                        <li>42</li>
+                        <li>43</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter-group">
+                <button class="filter-button" id="colour-btn">Colour &#9660;</button>
+                <div class="dropdown-content" id="colour-dropdown">
+                    <ul class="colour-list">
+                        <li>Black</li>
+                        <li>White</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter-group">
+                <button class="filter-button" id="discount-btn">Discount &#9660;</button>
+                <div class="dropdown-content" id="discount-dropdown">
+                    <ul class="discount-list">
+                        <li>10%</li>
+                        <li>15%</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter-group">
+                <button class="filter-button" id="merk-btn">Merk &#9660;</button>
+                <div class="dropdown-content" id="merk-dropdown">
+                    <ul class="merk-list">
+                        <li>Adidas</li>
+                        <li>Nike</li>
+                        <li>Ventela</li>
+                        <li>Compass</li>
+                        <li>More</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+
+        <section class="product-list" id="product-list">
+            <div class="product" data-size="40" data-color="Black" data-discount="10" data-brand="Adidas" data-price="1700000">
+                <img src="product1.png" alt="Adidas Spezial">
+                <p>Adidas Spezial</p>
+                <p>Rp 1.700.000</p>
+            </div>
+            <div class="product" data-size="42" data-color="Black" data-discount="15" data-brand="Adidas" data-price="2200000">
+                <img src="product2.png" alt="Adidas OG Samba">
+                <p>Adidas OG Samba</p>
+                <p>Rp 2.200.000</p>
+            </div>
+            <div class="product" data-size="40" data-color="Brown" data-discount="15" data-brand="Adidas" data-price="2300000">
+                <img src="product3.png" alt="Adidas Gazelle">
+                <p>Adidas Gazelle</p>
+                <p>Rp 2.300.000</p>
+            </div>
+            <div class="product" data-size="40" data-color="Black" data-discount="10" data-brand="Adidas" data-price="1700000">
+                <img src="product4.png" alt="Adidas Campus">
+                <p>Adidas Campus</p>
+                <p>Rp 1.700.000</p>
+            </div>
+            <div class="product" data-size="41" data-color="Black" data-discount="15" data-brand="Nike" data-price="1500000">
+                <img src="product5.png" alt="Nike Air Max Excee">
+                <p>Nike Air Max Excee</p>
+                <p>Rp 1.500.000</p>
+            </div>
+            <div class="product" data-size="42" data-color="Multicolor" data-discount="15" data-brand="Nike" data-price="2100000">
+                <img src="product6.png" alt="Nike Air Max Plus">
+                <p>Nike Air Max Plus</p>
+                <p>Rp 2.100.000</p>
+            </div>
+            <div class="product" data-size="41" data-color="Black" data-discount="10" data-brand="Nike" data-price="1900000">
+                <img src="product7.png" alt="Nike Dunk Low">
+                <p>Nike Dunk Low</p>
+                <p>Rp 1.900.000</p>
+            </div>
+            <div class="product" data-size="40" data-color="White" data-discount="10" data-brand="Nike" data-price="1700000">
+                <img src="product8.png" alt="Nike Air Force White">
+                <p>Nike Air Force White</p>
+                <p>Rp 1.700.000</p>
+            </div>
+            <div class="product" data-size="38" data-color="Blue" data-discount="15" data-brand="Ventela" data-price="235000">
+                <img src="product9.png" alt="Ventela Republic Low">
+                <p>Ventela Republic Low</p>
+                <p>Rp 235.000</p>
+            </div>
+            <div class="product" data-size="39" data-color="Black" data-discount="10" data-brand="Ventela" data-price="300000">
+                <img src="product10.png" alt="Ventela All Is Well">
+                <p>Ventela All Is Well</p>
+                <p>Rp 300.000</p>
+            </div>
+            <div class="product" data-size="40" data-color="Red" data-discount="10" data-brand="Ventela" data-price="430000">
+                <img src="product11.png" alt="Ventela Sang Sekerta">
+                <p>Ventela Sang Sekerta</p>
+                <p>Rp 430.000</p>
+            </div>
+            <div class="product" data-size="41" data-color="Red" data-discount="15" data-brand="Ventela" data-price="235000">
+                <img src="product12.png" alt="Ventela Public Suede">
+                <p>Ventela Public Suede</p>
+                <p>Rp 235.000</p>
+            </div>
+            <div class="product" data-size="40" data-color="Black" data-discount="10" data-brand="Compass" data-price="400000">
+                <img src="product13.png" alt="Compass Gazelle Low">
+                <p>Compass Gazelle Low</p>
+                <p>Rp 400.000</p>
+            </div>
+            <div class="product" data-size="41" data-color="White" data-discount="15" data-brand="Compass" data-price="400000">
+                <img src="product14.png" alt="Compass Gazelle Low W">
+                <p>Compass Gazelle Low W</p>
+                <p>Rp 400.000</p>
+            </div>
+            <div class="product" data-size="42" data-color="White" data-discount="10" data-brand="Compass" data-price="568000">
+                <img src="product15.png" alt="Compass Hi Decon">
+                <p>Compass Hi Decon</p>
+                <p>Rp 568.000</p>
+            </div>
+            <div class="product" data-size="40" data-color="Black" data-discount="10" data-brand="Compass" data-price="798000">
+                <img src="product16.png" alt="Compass Velocity Black">
+                <p>Compass Velocity Black</p>
+                <p>Rp 798.000</p>
+            </div>
+        </section>
+        
+        
+        
+    </main>
+
+    <footer>
+        <section class="footer-info">
+            <div class="column">
+                <h3>Get the Latest Collection of Sports Shoes, Sneakers, and
+                    Casual Shoes at Ten Shoe Spot</h3>
+                <p>Welcome to Ten Shoe Spot, the best online destination to get the latest collection of sports shoes, sneakers, and casual shoes. We offer a wide range of high-quality footwear that suits all your needs, whether for sports, everyday style, or casual occasions.
+                    At Ten Shoe Spot, you can find top products from various well-known brands, with the latest models that are constantly updated. From running shoes, basketball shoes, to trendy sneakers and comfortable casual shoes, everything is available here. We also offer a variety of sizes, colors, and designs for men, women, and kids, so every family member can find their favorite shoes.</p>
+            </div>
+            <div class="column">
+                <h3>Ten Shoe Spot Provides All Your Footwear Needs</h3>
+                <p>Looking for comfortable shoes that match your style? Ten Shoe Spot is the perfect place to meet all your footwear needs. We offer a wide selection of shoes, ranging from sports shoes, sneakers, to casual shoes for men and women.
+                    With various up-to-date models and the best quality, Ten Shoe Spot ensures you find the right shoes for every activity, whether it's for sports, work, or casual occasions. Shopping at Ten Shoe Spot also offers extra convenience with fast shipping, secure payment methods, and an easy return policy. Find your dream shoes only at Ten Shoe Spot.</p>
+            </div>
+        </section>
+        <section class="email-signup">
+            <input type="email" placeholder="REGISTER YOUR EMAIL TO GET INFO AND SPECIAL OFFERS">
+            <button>SIGN UP FOR FREE</button>
+        </section>
+        <section class="footer-nav">
+            <div>
+                <h4>PRODUCT</h4>
+                <ul>
+                    <li><a href="#">Shoe</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>HELP</h4>
+                <ul>
+                    <li><a href="#">Get help</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Payment Option</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <!-- Add more links as needed -->
+                </ul>
+            </div>
+            <div>
+                <h4>COMPANY</h4>
+                <ul>
+                    <li><a href="#">About Ten Shoe Spot</a></li>
+                </ul>
+            </div>
+        </section>
+        <div class="copyright">
+            <p>2024 Ten Shoe Spot. All Rights Reserved.</p>
+        </div>
+    </footer>
+<script>
+    // Price Dropdown Toggle
+document.getElementById('price-btn').addEventListener('click', function() {
+    var dropdown = document.getElementById('price-dropdown');
+    dropdown.classList.toggle('show'); // Toggle visibility
+});
+
+// Size Dropdown Toggle
+document.getElementById('size-btn').addEventListener('click', function() {
+    var dropdown = document.getElementById('size-dropdown');
+    dropdown.classList.toggle('show'); // Toggle visibility
+});
+document.getElementById('colour-btn').addEventListener('click', function() {
+    var dropdown = document.getElementById('colour-dropdown');
+    dropdown.classList.toggle('show'); // Toggle visibility
+});
+document.getElementById('discount-btn').addEventListener('click', function() {
+    var dropdown = document.getElementById('discount-dropdown');
+    dropdown.classList.toggle('show'); // Toggle visibility
+});
+document.getElementById('merk-btn').addEventListener('click', function() {
+    var dropdown = document.getElementById('merk-dropdown');
+    dropdown.classList.toggle('show'); // Toggle visibility
+});
+
+// Close the dropdown if user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.filter-button')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+let selectedSize = null;
+let selectedColor = null;
+let selectedDiscount = null;
+let selectedBrand = null;
+let selectedPriceMin = 0;
+let selectedPriceMax = 3000000;
+
+// Function to filter products based on the selected filters
+function filterProducts() {
+    const products = document.querySelectorAll('.product');
+    products.forEach(product => {
+        const productSize = product.getAttribute('data-size');
+        const productColor = product.getAttribute('data-color');
+        const productDiscount = product.getAttribute('data-discount');
+        const productBrand = product.getAttribute('data-brand');
+        const productPrice = parseInt(product.getAttribute('data-price'));
+
+        let show = true;
+
+        if (selectedSize && productSize !== selectedSize) show = false;
+        if (selectedColor && productColor !== selectedColor) show = false;
+        if (selectedDiscount && productDiscount !== selectedDiscount) show = false;
+        if (selectedBrand && productBrand !== selectedBrand) show = false;
+        if (productPrice < selectedPriceMin || productPrice > selectedPriceMax) show = false;
+
+        if (show) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
+// Event listeners for size dropdown
+document.querySelectorAll('#size-dropdown li').forEach(item => {
+    item.addEventListener('click', function() {
+        selectedSize = this.textContent;
+        filterProducts();
+    });
+});
+
+// Event listeners for color dropdown
+document.querySelectorAll('#colour-dropdown li').forEach(item => {
+    item.addEventListener('click', function() {
+        selectedColor = this.textContent;
+        filterProducts();
+    });
+});
+
+// Event listeners for discount dropdown
+document.querySelectorAll('#discount-dropdown li').forEach(item => {
+    item.addEventListener('click', function() {
+        selectedDiscount = this.textContent.replace('%', ''); // Removing % symbol for consistency
+        filterProducts();
+    });
+});
+
+// Event listeners for brand dropdown
+document.querySelectorAll('#merk-dropdown li').forEach(item => {
+    item.addEventListener('click', function() {
+        selectedBrand = this.textContent;
+        filterProducts();
+    });
+});
+
+// Event listener for price range slider
+const priceRange = document.getElementById('price-range');
+const priceValue = document.getElementById('price-value');
+
+priceRange.addEventListener('input', function() {
+    selectedPriceMax = parseInt(priceRange.value);
+    priceValue.textContent = selectedPriceMax.toLocaleString(); // Update price value displayed
+    filterProducts(); // Reapply the filter with the updated price range
+});
+
+// Reset filters
+document.getElementById('reset-filters').addEventListener('click', function() {
+    selectedSize = null;
+    selectedColor = null;
+    selectedDiscount = null;
+    selectedBrand = null;
+    selectedPriceMin = 0;
+    selectedPriceMax = 3000000;
+    priceRange.value = 3000000; // Reset the price range slider
+    priceValue.textContent = "3.000.000";
+    filterProducts();
+});
+
+
+
+</script>
+</body>
+</html>
